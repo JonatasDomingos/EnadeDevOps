@@ -3,15 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.bruno.enade.resources;
+package com.jonat.enade.resources;
 
-import com.bruno.enade.dao.TipoQuestaoDAO;
-import com.bruno.enade.model.TipoQuestao;
+import com.jonat.enade.dao.TipoQuestaoDAO;
+import com.jonat.enade.model.TipoQuestao;
 import javax.ws.rs.Path;
 
 /**
  *
- * @author bruno
+ * @author jonat
  */
 @Path("tipoquestao")
 public class TipoQuestaoResource extends GenericResource<TipoQuestao, TipoQuestaoDAO> {

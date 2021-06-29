@@ -1,4 +1,4 @@
-package com.bruno.enade;
+package com.jonat.enade;
 
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;

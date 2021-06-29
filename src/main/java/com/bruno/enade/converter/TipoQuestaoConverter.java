@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.bruno.enade.converter;
+package com.jonat.enade.converter;
 
-import com.bruno.enade.model.TipoQuestao;
+import com.jonat.enade.model.TipoQuestao;
 import javax.faces.component.UIComponent;
 import javax.faces.context.FacesContext;
 import javax.faces.convert.Converter;
@@ -14,7 +14,7 @@ import javax.inject.Named;
 
 /**
  *
- * @author bruno
+ * @author jonat
  */
 @FacesConverter("tipoquestaoConverter")
 @Named

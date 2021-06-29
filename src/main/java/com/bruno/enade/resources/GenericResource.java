@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.bruno.enade.resources;
+package com.jonat.enade.resources;
 
-import com.bruno.enade.dao.GenericDAO;
-import com.bruno.enade.dao.FactoryDAO;
-import com.bruno.enade.util.Constants;
+import com.jonat.enade.dao.GenericDAO;
+import com.jonat.enade.dao.FactoryDAO;
+import com.jonat.enade.util.Constants;
 import java.util.List;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
@@ -20,7 +20,7 @@ import javax.ws.rs.core.MediaType;
 
 /**
  *
- * @author bruno
+ * @author jonat
  * @param <T>
  * @param <D>
  */

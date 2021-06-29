@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.bruno.enade.controller;
+package com.jonat.enade.controller;
 
-import com.bruno.enade.dao.FactoryDAO;
-import com.bruno.enade.dao.ResultadoDAO;
-import com.bruno.enade.dao.UsuarioDAO;
-import com.bruno.enade.model.Resultado;
-import com.bruno.enade.model.Usuario;
+import com.jonat.enade.dao.FactoryDAO;
+import com.jonat.enade.dao.ResultadoDAO;
+import com.jonat.enade.dao.UsuarioDAO;
+import com.jonat.enade.model.Resultado;
+import com.jonat.enade.model.Usuario;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -24,7 +24,7 @@ import org.primefaces.model.chart.PieChartModel;
 
 /**
  *
- * @author bruno
+ * @author jonat
  */
 @Named
 @SessionScoped

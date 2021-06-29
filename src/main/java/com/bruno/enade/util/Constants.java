@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.bruno.enade.util;
+package com.jonat.enade.util;
 
 /**
  *
- * @author bruno
+ * @author jonat
  */
 public final class Constants {
 

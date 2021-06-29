@@ -3,14 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.bruno.enade.dao;
+package com.jonat.enade.dao;
 
-import com.bruno.enade.model.Prova;
+import com.jonat.enade.model.Prova;
 import java.util.Date;
 
 /**
  *
- * @author bruno
+ * @author jonat
  */
 public class ProvaDAO extends GenericDAO<Prova, Integer> {
 

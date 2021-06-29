@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.bruno.enade.controller;
+package com.jonat.enade.controller;
 
-import com.bruno.enade.dao.FactoryDAO;
-import com.bruno.enade.dao.UsuarioDAO;
-import com.bruno.enade.model.TipoUsuario;
-import com.bruno.enade.model.Usuario;
-import com.bruno.enade.util.EncryptUtil;
+import com.jonat.enade.dao.FactoryDAO;
+import com.jonat.enade.dao.UsuarioDAO;
+import com.jonat.enade.model.TipoUsuario;
+import com.jonat.enade.model.Usuario;
+import com.jonat.enade.util.EncryptUtil;
 import javax.faces.event.ActionEvent;
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -22,7 +22,7 @@ import org.primefaces.event.RowEditEvent;
 
 /**
  *
- * @author bruno
+ * @author jonat
  */
 @Named
 @SessionScoped

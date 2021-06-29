@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.bruno.enade.model;
+package com.jonat.enade.model;
 
 import java.io.Serializable;
 import java.util.List;
@@ -27,7 +27,7 @@ import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
- * @author bruno
+ * @author jonat
  */
 @Entity
 @Table(name = "Questao")
