@@ -1,0 +1,81 @@
+version: '3'
+
+services:
+
+## PostgreSQL
+## Banco para sonar
+  db:
+    container_name: postgresql
+    restart: always
+    image: postgres:13.2
+    environment:
+      - POSTGRES_USER=sonar
+      - POSTGRES_PASSWORD=sonar
+    volumes:
+      - ./postgresql/postgresql_sonar:/var/lib/postgresql
+      - ./postgresql/postgresql_sonar_data:/var/lib/postgresql/data
+
+## MySQL
+  mysqldb:
+    container_name: mysqldb
+    image: mysql:8.0.25
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - ./mysql/data:/var/lib/mysql
+      
+## SonarQube
+## Login admin/sonar
+  sonarqube:
+    container_name: sonarqube
+    image: sonarqube:latest
+    restart: always
+    ports:
+      - 9000:9000
+      - 9092:9092
+    volumes:
+      - ./sonarqube/sonarqube_data:/opt/sonarqube/data
+      - ./sonarqube/sonarqube_logs:/opt/sonarqube/logs
+
+## Jenkins
+## admin/admin
+  jenkins:
+    container_name: jenkins
+    image: jenkins/jenkins:2.277.4-lts-jdk11
+    restart: always
+    ports:
+      - 8080:8080
+      - 50000:50000
+    volumes:
+      - ./jenkins/jenkins_home:/var/jenkins_home
+
+## Tomcat
+  tomcat:
+    container_name: tomcat
+    image: bitnami/tomcat:9.0.46
+    restart: always
+    ports:
+      - 8888:8080
+    environment:
+    #   TOMCAT_USERNAME: tomcat
+    #   TOMCAT_PASSWORD: tomcat
+      TOMCAT_ALLOW_REMOTE_MANAGEMENT: 1
+    depends_on:
+      - mysqldb
+    volumes:
+      - ./tomcat:/bitnami
+      - ./tomcat/tomcat-users.xml:/opt/bitnami/tomcat/conf/tomcat-users.xml
+
+# PhpMyAdmin
+  phpmyadmin:
+    container_name: phpmyadmin
+    image: phpmyadmin:latest
+    restart: always
+    ports:
+      - 81:80
+    environment:
+      - PMA_ARBITRARY=1
+    depends_on:
+      - mysqldb
